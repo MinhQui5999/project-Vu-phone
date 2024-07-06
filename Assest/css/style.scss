@@ -33,6 +33,31 @@ body {
     background: $color-background;
 }
 
+a.title-main {
+    text-decoration: none;
+
+    h2 {
+        padding-left: 2px;
+        margin: 0;
+        position: relative;
+        font-weight: 900;
+        color: $color-red-80;
+        font-family: Roboto-Regular;
+
+        &:before {
+            position: absolute;
+            content: "";
+            background: $color-red-80;
+            height: 30px;
+            width: 10px;
+            border-radius: 10px;
+            top: 50%;
+            left: -2%;
+            transform: translateY(-50%)
+        }
+    }
+}
+
 #logo-store {
     text-decoration: none;
     color: $color-red-60;
@@ -44,9 +69,7 @@ body {
     background: $color-white
 }
 
-.test-khu {
-    padding: 50px 0;
-}
+
 
 header {
     /* .header-top{
@@ -56,7 +79,6 @@ header {
         background-color: $color-red-60 !important;
         /*padding:50px 0;*/
         .navbar {
-
             background-color: $color-red-60 !important;
 
             &.fixed {
@@ -328,30 +350,6 @@ main {
             padding: $margin-page 0 0 0;
 
             .col-left {
-                a {
-                    text-decoration: none;
-
-                    .main-category {
-                        padding-left: 2px;
-                        margin: 0;
-                        position: relative;
-                        font-weight: 900;
-                        color: $color-red-80;
-                        font-family: Roboto-Regular;
-
-                        &:before {
-                            position: absolute;
-                            content: "";
-                            background: $color-red-80;
-                            height: 30px;
-                            width: 10px;
-                            border-radius: 10px;
-                            top: 50%;
-                            left: -2%;
-                            transform: translateY(-50%)
-                        }
-                    }
-                }
             }
 
             .col-right {
@@ -486,6 +484,73 @@ main {
                         object-fit: contain;
                         border: 1px solid $color-gray-80;
                         border-radius: 10px;
+                    }
+                }
+            }
+        }
+    }
+
+    .main-product-article {
+        background: $color-white;
+
+        .content {
+            h2 {
+                padding: 2rem 0;
+
+                &:before {
+                    position: absolute;
+                    content: "";
+                    background: $color-red-80;
+                    height: 30px;
+                    width: 10px;
+                    border-radius: 10px;
+                    top: 50%;
+                    left: -1%;
+                    transform: translateY(-50%)
+                }
+            }
+
+            .article-carousel-product {
+                .item {
+                    padding-bottom: 2rem;
+
+                    img {
+                        aspect-ratio: 6/4;
+                        object-fit: cover;
+                        display: block;
+                        border-radius: 10px;
+                        margin-bottom: 1rem;
+                    }
+
+                    span {
+                    }
+                }
+            }
+
+            .owl-carousel .owl-nav.disabled {
+                display: block;
+            }
+
+            .owl-nav {
+                .owl-prev, .owl-next {
+                    position: absolute;
+                    top: 8%;
+                    left: -3%;
+                    transform: translateY(-8%);
+
+                    &:hover {
+                        background: $color-white;
+                    }
+
+                    span {
+                        color: $color-red-60;
+                        font-size: 80px;
+                        font-weight: 600;
+                    }
+
+                    &.owl-next {
+                        left: 100%;
+                      
                     }
                 }
             }

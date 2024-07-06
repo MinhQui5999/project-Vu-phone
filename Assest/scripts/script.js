@@ -43,6 +43,26 @@ $(function () {
         }
     });
 
+    $('.article-carousel-product').owlCarousel({
+        center: true,
+        dots: false,
+        nav: true,
+        loop: true,
+        margin: 10,
+        responsive: {
+            600: {
+                items: 2
+            },
+            1000: {
+                items: 6
+            },
+            10000: {
+                items: 6
+            }
+        }
+    });
+    
+
     //animmation
     AOS.init(
         {
